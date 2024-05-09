@@ -1,0 +1,295 @@
+@font-face
+    font-family: 'Lato'
+    src: url('/wp-content/themes/buenotalk/assets/fonts/Lato/Lato-Regular.ttf')
+    font-weight: normal
+    font-style: normal
+
+@font-face
+    font-family: 'Montserrat'
+    src: url('/wp-content/themes/buenotalk/assets/fonts/Montserrat/Montserrat-Regular.ttf')
+    font-weight: normal
+    font-style: normal
+@font-face
+    font-family: 'Montserrat SemiBold'
+    src: url('/wp-content/themes/buenotalk/assets/fonts/Montserrat/Montserrat-Bold.ttf')
+    font-weight: normal
+    font-style: normal
+@font-face
+    font-family: 'Montserrat Bold'
+    src: url('/wp-content/themes/buenotalk/assets/fonts/Montserrat/Montserrat-Black.ttf')
+    font-weight: normal
+    font-style: normal
+
+html
+    scroll-behavior: smooth
+body
+    color: $base-color
+    font-family: $font-texts
+    font-size: $rootSize
+    line-height: $lh-p
+    font-weight: 400
+    background: url(/wp-content/themes/buenotalk/assets/images/body_font_bg.png) 50% 0% no-repeat
+    background-size: 100% auto
+    position: relative
+.body-multi-bg
+    position: absolute
+    width: 100%
+    height: 100%
+    overflow: hidden
+    top: 0
+    z-index: 0
+    .decor-bg-1
+        position: absolute
+        background: url(/wp-content/themes/buenotalk/assets/images/blot-1.png) 50% 50% no-repeat
+        background-size: contain
+        width: 60vh
+        height: 60vh
+        top: 25vw
+        left: -15vh
+    .decor-bg-2
+        position: absolute
+        background: url(/wp-content/themes/buenotalk/assets/images/blot-1.png) 50% 50% no-repeat
+        background-size: contain
+        width: 60vh
+        height: 60vh
+        top: 60vw
+        left: calc(100% - 35vh)
+    .decor-bg-3
+        position: absolute
+        background: url(/wp-content/themes/buenotalk/assets/images/blot-3.png) 50% 50% no-repeat
+        background-size: contain
+        width: 30vh
+        height: 30vh
+        top: 80%
+        left: calc(100% - 25vh)
+section
+    position: relative
+    z-index: 3
+h1, h2
+    font-family: $bonnie-bold-fonts
+    font-weight: 700
+    color: $base-color
+h3, h4 ,h5, h6
+    font-family: $bonnie-fonts
+    font-weight: 700
+    color: $base-color
+h1
+    line-height: $lh-1
+    font-size: $f0
+    font-family: $inter-semiBold
+h2
+    line-height: $lh-1
+    font-size: $h2-size
+    font-family: $inter-semiBold
+h3
+    line-height: $lh-3
+    font-size: $h3-size
+    font-family: $inter-semiBold
+h4
+    line-height: $lh-3
+    font-size: $h4-size
+h5
+    line-height: $lh-5
+    font-size: $h5-size
+h6
+    line-height: $lh-3
+    font-size: $h6-size
+p
+    line-height: $lh-p
+    color: $base-color
+    font-family: $font-texts
+    font-weight: 400
+strong
+    font-family: $inter-semiBold
+
+.container
+    max-width: 1320px
+a
+    position: relative
+
+.is_onmobile
+    display: none
+.no_mobile
+    display: contents
+.right_side
+    order: 2 !important
+svg
+    -webkit-background-clip: text
+.header_top
+    background: $seconday-light
+    height: 40px
+    .header_top_contacts, a, i
+        font-size: $f7
+        line-height: $lh-p
+        color: $primary-color
+        i
+            margin-right: 10px
+    .contact_item
+        margin-right: 40px
+        &:last-child
+            margin-right: 0px
+header
+    padding: 10px 30px
+    .custom-logo
+        max-width: 475px
+        height: auto
+
+.cta_btn
+    +cta-btn
+    margin-bottom: 10px
+    display: inline-block
+    &:hover
+        +cta-btn-hover
+        color: $primary-color
+
+.search_form_panel
+    .read_more_link
+        margin-right: 20px
+        margin-top: 40px
+        &::after
+            content: none !important
+        &::before
+            font-family: bootstrap-icons
+            content: "\f12f"
+            margin-right: 10px
+            top: 3px
+            position: relative
+body > .container
+    position: relative
+    z-index: 1
+.cat_box
+    position: fixed
+    bottom: 0
+    right: 20px
+    width: 150px
+    height: 150px
+    background: url(/wp-content/themes/buenotalk/assets/images/cat_1.png) 50% 0% no-repeat
+    background-size: contain
+    cursor: pointer
+    .cat_say
+        background: url(/wp-content/themes/buenotalk/assets/images/cat_2.png) 50% 0% no-repeat
+        background-size: contain
+        width: 110px
+        height: 80px
+        opacity: 0
+        position: absolute
+        bottom: 10px
+        right: 1px
+        transform: translateX(-100%)
+        transition: opacity 0.3s, transform 0.3s
+    &:hover .cat_say
+        opacity: 1
+    .cat_popup
+        display: none
+        position: absolute
+        z-index: 999
+        top: 100%
+        width: 35vw
+        left: 50%
+        transform: inherit
+        padding: 30px 100px
+        background: #F8E47F
+        box-shadow: 10px 10px 0px #000
+        .gform_confirmation_message
+            height: 100%
+            width: 100%
+            position: absolute
+            top: 0
+            background: #f8e47f
+            left: 0
+            z-index: 0
+            display: flex
+            align-content: flex-end
+            justify-content: space-evenly
+            flex-direction: column
+            font-size: 28px
+            padding: 30px 60px
+            line-height: 34px
+            font-weight: 900
+            color: #000
+        h3
+            font-size: $f3
+            font-weight: 700
+            margin-bottom: 30px
+            color: $base-color
+        form
+            input[type=text]
+                box-shadow: 6px 6px 0px #000
+            input[type=submit]
+                box-shadow: 3px 3px 0px #000
+                text-align: center
+                margin: 0 auto
+                padding: 15px 30px
+                border-radius: 10px
+                border: 0
+                background: $primary-color
+                font-style: italic
+                font-size: 18px
+                font-weight: 700
+                color: $base-color
+                font-family: $inter-semiBold
+                transition: 0.2s
+                &:hover
+                    background: $primary-light
+                    transition: 0.2s
+        .close_popup
+            border: 0
+            width: 30px
+            height: 30px
+            right: 10px
+            position: absolute
+            top: 10px
+            background: none
+            font-size: 20px
+            font-weight: 600
+            z-index: 5
+.cat_box.cat_fly
+    position: fixed
+    top: 20%
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 99999
+    .cat_say
+        display: none
+
+.lost_page
+    .container
+        margin-top: 100px
+        margin-bottom: 150px
+    h1
+        font-size: 300px
+        color: #000
+        font-weight: 900
+        text-align: center
+        line-height: 363px
+    h2
+        font-size: 36px
+        line-height: 44px
+        text-align: center
+        color: $base-color
+        line-height: 44px
+        margin-bottom: 50px
+    .cta_btn
+        display: block
+        width: fit-content
+        color: #000
+    .lost_search
+        padding: 60px 0 80px 0
+        background: $seconday-color
+        border-bottom: 10px solid $primary-color
+        h6
+            color: $light-color
+            margin-bottom: 50px
+            font-weight: 300
+        .search
+            .search-field
+                padding: 10px 15px
+                border: 0
+                border-radius: 15px
+            .search-submit
+                background-size: inherit
+                background: $primary-color
+                border-radius: 30px
+                color: $light-color
+                border: 0
+                padding: 12px 25px

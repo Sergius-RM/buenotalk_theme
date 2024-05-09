@@ -1,0 +1,23 @@
+.highlighted_articles
+    width: 100%
+    margin: 50px auto
+    margin-bottom: 100px
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    h2
+        font-size: $h3-size
+        line-height: $lh-2
+        margin-bottom: 100px
+
+    :not(:root:root) .equal-height
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        flex-wrap: wrap
+
+    :not(:root:root) .equal-height > *
+        -webkit-box-flex: 1
+        -ms-flex: 1
+        flex: 1
+        margin: 0

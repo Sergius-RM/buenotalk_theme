@@ -1,0 +1,99 @@
+footer
+    +footer-fonts
+    text-align: center
+    position: relative
+    z-index: 5
+    .footer-logo
+        margin-bottom: 30px
+        display: block
+    .second-logo-img
+        margin: 0 auto
+        width: 100px
+        height: auto
+        position: relative
+        z-index: 10
+        margin-top: -50px
+        margin-bottom: 50px
+    h3
+        color: $light-color
+        font-size: 16px
+        line-height: 20px
+    a
+        +link-light
+        font-family: $font-link
+        color: $base-color
+        &:hover
+            border-bottom: 0
+            color: $btn-hover
+    .site-branding
+        text-align: center
+        background: url(/wp-content/themes/buenotalk/assets/images/font_bg.png) 50% 0% no-repeat
+        background-size: contain
+        a
+            font-size: $f0
+            font-weight: 900
+            color: $base-color
+            font-style: italic
+            font-family: $bonnie-bold-fonts
+            background: url(/wp-content/themes/buenotalk/assets/images/footer_logo_bg.png) 50% 0% no-repeat
+            background-size: contain
+            display: flex
+            height: 250px
+            width: 100%
+            max-width: 350px
+            margin: 0 auto
+            justify-content: center
+            align-items: center
+            transition: 0.2s
+            &:hover
+                color: $btn-hover
+                text-decoration: underline
+                transition: 0.2s
+        .second-logo
+            background: none
+            height: auto
+            margin-top: 70px
+        div
+            margin-bottom: 10px
+
+    .footer_socials
+        font-size: $f3
+        font-weight: 700
+        margin-bottom: 45px
+        font-style: italic
+        a
+            font-family: $inter-semiBold
+            transition: 0.2s
+            &:nth-child(2)
+                margin: 0 50px
+            &:hover
+                transition: 0.2s
+    .footer_nav_menu
+        border-top: 2px solid #fff
+        width: 80%
+        max-width: 1320px
+        margin: 0 auto
+        padding: 25px 0
+        .menu
+            padding: 0
+            list-style: none
+            display: flex
+            flex-direction: row
+            justify-content: center
+            margin-bottom: 0
+            li
+                line-height: $lh-3
+                margin: 0 15px
+                a
+                    transition: 0.2s
+                    color: $base-color
+                    font-size: $f6
+                    font-style: italic
+                    &:hover
+                        color: $a-hover
+                        transition: 0.2s
+
+.site-footer
+    padding: 0 60px
+    background: rgb(127,200,197)
+    background: linear-gradient(35deg, rgba(127,200,197,1) 0%, rgba(255,255,255,1) 100%, rgba(246,77,24,1) 100%)

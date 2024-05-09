@@ -1,0 +1,115 @@
+.blogrid_articles
+    margin-bottom: 100px
+    h1
+        margin-bottom: 30px
+    h2
+        margin-bottom: 30px
+    .search_menu
+        position: relative
+        width: 300px
+        display: block
+        margin: 0 auto
+        margin-bottom: 0px
+        margin-bottom: 50px
+        .search_form
+            background: #fff
+            padding: 6px 0
+            border-radius: 5px
+            width: 0
+            .search-submit
+                border: 0
+                background: #fff
+                width: 30px
+                height: 30px
+                opacity: 0.2
+            .search-field
+                padding: 5px 10px
+                border: none
+                border-radius: 5px
+
+        .search_form.active
+            width: fit-content
+            padding: 6px 10px 6px 50px
+            transition: 1s
+            opacity: 1
+        .search_btn
+            background: url(/wp-content/themes/buenotalk/assets/images/lang-bg.png) 50% 50% no-repeat
+            background-size: cover
+            display: flex
+            flex-wrap: nowrap
+            align-items: center
+            justify-content: center
+            flex-direction: row
+            width: 50px
+            height: 50px
+            cursor: pointer
+            position: relative
+            z-index: 3
+            img
+                z-index: 3
+
+            form
+                display: flex
+    .blogrid-content
+        margin-bottom: 30px
+    .post_item
+        .articles-item
+            position: relative
+            margin-bottom: 20px
+            .category-thumbnails
+                position: absolute
+                top: 20px
+                right: 10px
+                z-index: 2
+                img
+                    width: 70px
+                    height: auto
+                    z-index: 5
+                    position: relative
+            a
+                text-decoration: none
+            .articles-content
+
+    :not(:root:root) .equal-height
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        flex-wrap: wrap
+        flex-direction: column
+        z-index: 1
+
+    :not(:root:root) .equal-height > *
+        -webkit-box-flex: 1
+        -ms-flex: 1
+        flex: 1
+        margin: 0
+
+    .more_posts
+        display: block
+        border-radius: 15px
+        box-shadow: 4px 4px 0 #000
+        padding: 15px 30px
+        background-color: #7FC8C5
+        font-style: italic
+        font-weight: 700
+        transition: 0.2s
+        margin-top: 30px
+        transition: 0.2s
+        img
+            display: none
+    .more_posts.is_loading
+        background: url(/wp-content/themes/buenotalk/assets/images/loading.gif) 90% 50% no-repeat
+        background-color: #F7BFBA
+        background-size: 20px
+        padding-right: 50px
+        transition: 0.2s
+        img
+            display: block
+.raised
+    transform: translateY(-50px)
+
+.blogrid_articles > .container
+    overflow: hidden
+    padding-bottom: 50px
+.unsuitable
+    display: none

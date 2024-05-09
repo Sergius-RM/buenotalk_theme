@@ -1,0 +1,212 @@
+.site-navigation
+    width: 100%
+    text-align: center
+    .menu-icon
+        display: inline-block
+        width: 54px
+        height: 54px
+        float: left
+        margin-right: 15px
+        background-size: contain
+        background-position: 50% 0%
+        background-repeat: no-repeat
+    a
+        .menu-image
+            display: block
+            width: 60px
+            height: 60px
+            float: left
+    ul
+        margin-bottom: 0
+        position: relative
+        margin-left: 0
+        padding-left: 0
+        li
+            display: inline-block
+            padding: 5px 15px
+            position: relative
+            margin-right: 10px
+            a
+                text-decoration: none
+                color: $base-color
+                font-family: $font-texts
+                font-size: 20px
+                font-weight: 700
+                font-style: italic
+                &:hover
+                    +link-hover
+                    color: $a-hover
+            a::before
+                content: ""
+                position: absolute
+                top: 100%
+                left: 0
+                width: 100%
+                height: 1px
+                background-color: $seconday-color
+                transform: scaleX(0)
+                transform-origin: left
+                transition: transform 0.2s
+            a:hover::before
+                transform: scaleX(1)
+
+
+.post-navigation
+    margin-top: 50px
+    a
+        color: #000
+        font-size: 22px
+        font-weight: 700
+        line-height: 24px
+        text-decoration: none
+        margin-right: 30px
+        .bi-arrow-left
+            margin-right: 10px
+            &::before
+                transition: transform 0.3s
+                transform-origin: right center
+        .bi-arrow-right
+            margin-left: 10px
+            &::before
+                transition: transform 0.3s
+                transform-origin: left center
+        &:hover
+            +link-hover
+            i::before
+                transform: scaleX(2)
+.lang_menu
+    background: url(/wp-content/themes/buenotalk/assets/images/lang-bg.png) 50% 50% no-repeat
+    background-size: cover
+    display: flex
+    flex-wrap: nowrap
+    align-items: center
+    justify-content: flex-end
+    flex-direction: column
+    width: 50px
+    height: 50px
+    cursor: pointer
+    .wpml-ls-legacy-dropdown
+        width: fit-content
+        transform: translateY(-40%)
+        a
+            padding: 4px 7px
+            border: 0
+        a.wpml-ls-item-toggle
+            padding-right: 20px
+            background: none
+        a.wpml-ls-item-toggle::after
+            font-size: 11px
+        .wpml-ls-sub-menu
+            border: 0
+            a
+                padding: 7px 7px
+                border: 0
+        ul
+            list-style: none
+            font-weight: 700
+            padding: 0
+
+.navbar-toggler-icon
+    width: 2em
+    height: 2em
+    position: absolute
+    right: 25px
+    top: 100px
+    z-index: 999
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+
+.mob_menu
+    +.show
+    background: #000000e6
+    padding: 20vw
+    width: 100%
+    top: 0
+    left: 0
+    position: fixed
+    height: 100%
+    overflow: scroll
+    z-index: 100
+    .site-navigation
+    ul
+        padding: 0
+        li
+            display: block
+            padding: 15px 15px
+            list-style: none
+            position: relative
+            a
+                text-decoration: none
+                color: #fff
+                font-family: $font-texts
+                width: 100%
+                font-size: 22px
+                font-style: italic
+                line-height: 2
+                font-weight: 600
+                transition: 0.2s
+                &:hover
+                    color: $a-hover
+                    text-decoration: underline
+                    transition: 0.2s
+                .description
+                    display: block
+                    color:#808080
+                    margin-top: 10px
+                    font-size: $f6
+                    line-height: $lh-p
+                    font-weight: 300
+                    font-family: Verdana, Tahoma, sans-serif
+        .menu-item-has-children
+           > a
+                // color: $primary-color
+        .shop_btn
+            float: none
+            width: fit-content
+            margin: 0 auto
+            background: #fff
+            padding: 15px 30px
+            font-weight: 600
+            background: $primary-color
+            border-radius: 30px
+            a
+                color: $light-color
+        .sub-menu
+            margin-left: 15px
+            li
+                a
+                    font-weight: 400
+                    font-size: 16px
+        .mega_menu
+            a
+                color: $light-color
+            .menu-item-has-children
+                &::before
+                        content: none
+                > a
+                    color: $primary-color
+                    line-height: 40px
+                    font-size: 18px
+                    font-weight: 600
+
+.pagination
+    margin-top: 50px
+    .nav-links
+        margin: 0 auto
+        .prev.page-numbers,
+        .next.page-numbers
+            display: none
+        .page-numbers
+            font-family: $inter-semiBold
+            font-style: italic
+            color: #000
+            text-decoration: none
+            margin-right: 20px
+            font-size: 18px
+            line-height: 20px
+            font-weight: 900
+            &:hover
+                color: $a-hover
+            .current
+                color: $a-hover
+        .page-numbers.active, .page-numbers.current
+            color: $a-hover
